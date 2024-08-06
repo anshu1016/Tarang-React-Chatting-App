@@ -7,9 +7,13 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@radix-ui/react-tabs'
 import { Button } from '@/components/ui/button';
 import { toast } from 'sonner';
 import { apiClient } from '@/lib/api-client';
-import { SIGNUP_ROUTE } from '@/utils/constants';
+import { LOGIN_ROUTE, SIGNUP_ROUTE } from '@/utils/constants';
+import { useNavigate } from 'react-router-dom';
+import { useAppStore } from '@/store';
 
 const Auth = () => {
+  const navigate = useNavigate();
+  const {setUserInfo} = useAppStore();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -32,15 +36,61 @@ const Auth = () => {
     }
     return true;
   }
-  const handleLogin = async () => {}
+  const validatLogin = () =>{
+    if(!email.length ){
+      toast.error("Email is Required")
+      return false;
+    }
+    if(!password.length ){
+      toast.error("Password is Required")
+
+      return false;
+    }
+    
+    return true;
+  }
+  const handleLogin = async () => {
+    if(validatLogin()){
+      const response = await apiClient.post(LOGIN_ROUTE,{email,password},{withCredentials:true})
+      console.log(response,"RESPONSE_LOGIN")
+      toast.success("Login Successful. Welcome to Tarang. ")
+      if(response.data.user.id){
+        setUserInfo(response.data.user)
+        if(response.data.user.profileSetup){
+          navigate("/chat")
+        }
+        else{
+          navigate("/profile")
+        }
+      }
+    }
+    if (validatLogin()) {
+      try {
+        const response = await apiClient.post(LOGIN_ROUTE, { email, password },{withCredentials:true});
+        console.log(response,"RESPONSE_LOGIN")
+      toast.success("Login Successful. Welcome to Tarang. ")
+        setEmail("")
+        setPassword("")
+        
+      } catch (error) {
+        console.log('Error during login:', error);
+      }
+    }
+  }
   const handleSignUp = async () => {
     if (validateSignup()) {
       try {
-        const response = await apiClient.post(SIGNUP_ROUTE, { email, password });
+        const response = await apiClient.post(SIGNUP_ROUTE, { email, password },{withCredentials:true});
         console.log("response", response);
+        toast.success("Signup Successful. Welcome to Tarang. ")
+
         setEmail("")
         setPassword("")
         setConfirmPassword("")
+        if(response.status === 201){
+          setUserInfo(response.data.user)
+          navigate("/profile")
+        }
       } catch (error) {
         console.log('Error during signup:', error);
       }
@@ -62,7 +112,8 @@ const Auth = () => {
               Fill in the details to get started with the best chat app!
             </p>
           </div>
-          <Tabs className='w-full mt-8'>
+          <div className="flex items-center justify-center w-full">
+          <Tabs className='w-full' defaultValue='login'>
             <TabsList className='bg-transparent rounded-none w-full flex justify-center'>
               <TabsTrigger value="login" className='data-[state=active]:bg-transparent text-black text-opacity-90 border-b-2 rounded-none w-1/2 text-center data-[state=active]:text-black data-[state=active]:font-semibold data-[state=active]:border-b-purple-500 p-3 transition-all duration-300'>Login</TabsTrigger>
               <TabsTrigger value='signup' className='data-[state=active]:bg-transparent text-black text-opacity-90 border-b-2 rounded-none w-1/2 text-center data-[state=active]:text-black data-[state=active]:font-semibold data-[state=active]:border-b-purple-500 p-3 transition-all duration-300'>Signup</TabsTrigger>
@@ -79,6 +130,7 @@ const Auth = () => {
               <Button className="rounded-full p-4" onClick={handleSignUp}>Signup</Button>
             </TabsContent>
           </Tabs>
+          </div>
         </div>
         <div className="hidden xl:flex justify-center items-center">
           <img src={Background} alt="background-img" className='h-[700px]' />
