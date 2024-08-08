@@ -80,3 +80,31 @@ export const login = async(req,res,next) =>{
         return res.status(500).send("Internal Server Error");
       }
 }
+
+
+export const getUserInfo = async(req,res) =>{
+    try {
+        const userData = await User.findById(req.userId);
+        console.log(req.userId,"ID FROM MIDDLEWARE")
+        if(!userData){
+            return res.status(404).send("User with the given ID not found.")
+        }
+        return res.status(200).json({
+           
+                    id: userData.id,
+                    email: userData.email,
+                    image: userData.image,
+                    color: userData.color,
+                    lastname: userData.lastName,
+                    firstName: userData.firstName,
+                    profileSetup: userData.profileSetup
+                  
+        })
+      
+    
+      } 
+    catch (err) {
+        console.log('Error during signup:', err);
+        return res.status(500).send("Internal Server Error");
+      }
+}
