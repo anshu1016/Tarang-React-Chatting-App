@@ -28,9 +28,17 @@ const App = () => {
       try{
         const response =await apiClient.get(GET_USER_INFO,{withCredentials:true})
         console.log(response,"GET_USER_RESPONSE")
+        if(response.status === 200 && response.data.id){
+          setUserInfo(response.data)
+        }else{
+          setUserInfo(undefined)
+        }
       }
       catch(err){
+        setUserInfo(undefined)
         console.log(err)
+      }finally{
+        setLoading(false)
       }
     }
     if(!userInfo){
@@ -40,7 +48,7 @@ const App = () => {
       setLoading(false)
     }
   },[userInfo,setUserInfo])
-  if(loading){
+   if(loading){
     return <div>Loading...</div>
   }
   return (
