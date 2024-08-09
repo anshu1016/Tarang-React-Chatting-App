@@ -11,7 +11,7 @@ const EmptyChatContainer = () => {
         height={200} width={300} options={animationDefaultOptions} />
         <div className="text-opacity-80 text-white flex flex-col gap-5 items-center mt-10 text-center lg:text-4xl text-3xl transition-all duration-300 ">
             <h3 className="poppins-medium">
-                Hi<span className="text-purple-500">!</span> Welcome to <span className="text-purple-500">Tarang</span> Chat app <span className="text-purple-500">.</span>
+                Hi<span className="text-purple-500">!</span> Welcome to <span className="text-purple-500">Tarang</span> Chat app<span className="text-purple-500">.</span>
             </h3>
         </div>
         </div>

@@ -21,9 +21,10 @@ const Chat = () => {
 
   return (
     <div className=' flex h-[100vh] text-white overflow-hidden  '>
-      <ChatContainer/>
+      
        <ContactsContainer/>
-      <EmptyChatContainer/>
+       <ChatContainer/>
+      {/* <EmptyChatContainer/> */}
      
     </div>
   )
