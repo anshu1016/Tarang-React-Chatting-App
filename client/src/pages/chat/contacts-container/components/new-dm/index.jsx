@@ -17,10 +17,12 @@ import { HOST, SEARCH_CONTACTS_ROUTES } from "@/utils/constants";
 import { toast } from "sonner";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
+import { useAppStore } from "@/store";
   
 const NewDM= () => {
     const [openNewContactModel,setOpenNewContactModel] = useState(false)
     const [searchedContacts,setSearchedContacts ] = useState([]);
+    const {setSelectedChatType,setSelectedChatData} = useAppStore()
     const handleSearchContacts = async (searchTerm) => {
         try {
           console.log(searchTerm, "TYPED VALUE");
@@ -38,8 +40,11 @@ const NewDM= () => {
         }
       };
 
-      const handleSelectNewContact = async() =>{
-
+      const handleSelectNewContact = async(contact) =>{
+        setOpenNewContactModel(false);
+        setSelectedChatType("contact")
+        setSelectedChatData(contact)
+        setSearchedContacts([])
       }
   return (
     <>
@@ -71,7 +76,7 @@ const NewDM= () => {
     <ScrollArea className="h-[250px] ">
         <div className="flex flex-col gap-5">
             {
-                searchedContacts?.map((contact)=><div key={contact} className="flex gap-3 items-center cursor-pointer" onClick={handleSelectNewContact}>
+                searchedContacts?.map((contact)=><div key={contact} className="flex gap-3 items-center cursor-pointer" onClick={()=>handleSelectNewContact(contact)}>
                      <div className="w-12 h-12 relative ">
             <Avatar className='h-12 w-12 rounded-full overflow-hidden '>
               {contact.image ? (
@@ -100,7 +105,7 @@ const NewDM= () => {
     </ScrollArea>
 
     {
-        searchedContacts.length<=0 && <div className="flex-1 md:bg-[#1c1d25] md:flex flex-col items-center justify-center hidden duration-1000 transition-all">
+        searchedContacts.length<=0 && <div className="flex-1 md:mt-0 md:flex flex-col items-center justify-center  duration-1000 transition-all">
         <Lottie
         isClickToPauseDisabled={true}
         height={100} width={100} options={animationDefaultOptions} />
