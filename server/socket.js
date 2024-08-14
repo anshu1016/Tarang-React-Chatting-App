@@ -20,23 +20,56 @@ const setUpSocket= (server) =>{
             }
         }
     }
-    const sendMessage = async(message)=>{
-        const senderSocketID = userSocketMap.get(message.sender)
+    // const sendMessage = async(message)=>{
+    //     const senderSocketID = userSocketMap.get(message.sender)
+    //     const recipientSocketID = userSocketMap.get(message.recipient);
+    //     const createdMessage = await Message.create(message)
+    //     const messageData = await Message.findById(createdMessage._id)
+    //     .populate("sender","id email firstName lastName image color")
+    //     .populate("recipient","id email firstName lastName image color")
+
+    //     if(recipientSocketID){
+    //         io.to(recipientSocketID).emit("receiveMessage",messageData)
+    //     }
+    //     if(senderSocketID){
+    //         io.to(senderSocketID).emit("receiveMessage",messageData)
+
+    //     }
+    //     console.log(`Sending message to recipient: ${recipientSocketID}`);
+    //     console.log(`Message data: `, messageData);
+    // }
+    const sendMessage = async (message) => {
+        console.log("sendMessage function triggered"); // Add this log to confirm the function is running
+    
+        const senderSocketID = userSocketMap.get(message.sender);
         const recipientSocketID = userSocketMap.get(message.recipient);
-        const createdMessage = await Message.create(message)
-        const messageData = await Message.findById(message._id)
-        .populate("sender","id email firstName lastName image color")
-        .populate("recipient","id email firstName lastName image color")
-
-        if(recipientSocketID){
-            io.to(recipientSocketID).emit("recieveMessage",messageData)
+    
+        console.log(`Sender Socket ID: ${senderSocketID}`);
+        console.log(`Recipient Socket ID: ${recipientSocketID}`);
+    
+        try {
+            const createdMessage = await Message.create(message);
+            const messageData = await Message.findById(createdMessage._id)
+                .populate("sender", "id email firstName lastName image color")
+                .populate("recipient", "id email firstName lastName image color");
+    
+            if (recipientSocketID) {
+                io.to(recipientSocketID).emit("receiveMessage", messageData);
+            }
+            if (senderSocketID) {
+                io.to(senderSocketID).emit("receiveMessage", messageData);
+            }
+            // socket.on("receiveMessage", (message) => {
+            //     console.log("Message received:", message); // This should log when a message is received
+            // });
+            
+            console.log(`Sending message to recipient: ${recipientSocketID}`);
+            console.log(`Message data: `, messageData);
+        } catch (error) {
+            console.error("Error in sendMessage:", error);
         }
-        if(senderSocketID){
-            io.to(senderSocketID).emit("recieveMessage",messageData)
-
-        }
-
-    }
+    };
+    
     io.on("connection",(socket)=>{
         const userId = socket.handshake.query.userId;
         if(userId){
@@ -45,10 +78,10 @@ const setUpSocket= (server) =>{
         }else{
             console.log("User Id not provided during connection")
         }
-        socket.on("sendmessage",sendMessage)
+        socket.on("sendMessage",sendMessage)
         socket.on("disconnect",()=>disconnect(socket))
     })
-
+ 
 }
 
 export default setUpSocket;
