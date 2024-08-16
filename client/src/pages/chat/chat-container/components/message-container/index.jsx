@@ -61,14 +61,34 @@
 // }
 
 // export default MessageContainer
+import { apiClient } from "@/lib/api-client";
 import { useAppStore } from "@/store";
+import { GET_ALL_MESSAGES_ROUTE } from "@/utils/constants";
 import moment from "moment";
 import { useEffect, useRef } from "react";
 
 const MessageContainer = () => {
     const scrollRef = useRef(null);
-    const { selectedChatType, selectedChatData, userInfo, selectedChatMessages } = useAppStore();
+    const { selectedChatType, selectedChatData, userInfo, selectedChatMessages,setSelectedChatMessages } = useAppStore();
 
+    useEffect(()=>{
+        const getMessages = async() =>{
+            try{
+                const res = await apiClient.post(GET_ALL_MESSAGES_ROUTE,{id:selectedChatData._id},{withCredentials:true})
+                if(res.data.messages){
+                    setSelectedChatMessages(res.data.messages);
+                }
+            }
+            catch(err){
+                console.log(err);
+            }
+        }
+        if(selectedChatData._id){
+            if(selectedChatType === "contact"){
+                getMessages();
+            }
+        }
+    },[selectedChatData,selectedChatType,setSelectedChatMessages])
     const renderMessages = () => {
         let lastDate = null;
         return selectedChatMessages.map((message, index) => {
@@ -92,7 +112,7 @@ const MessageContainer = () => {
         const isCurrentUserSender = message.sender === userInfo._id;
 
         return (
-            <div className={`flex ${isCurrentUserSender ? 'justify-end' : 'justify-start'}`}>
+            <div className={`flex ${isCurrentUserSender ? 'text-left' : 'text-right'}`}>
                 <div
                     className={`${
                         isCurrentUserSender
