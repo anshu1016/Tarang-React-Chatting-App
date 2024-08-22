@@ -124,20 +124,14 @@ const MultipleSelector = React.forwardRef(
       if (!arrayOptions || onSearch) {
         return;
       }
+      const neww = new Date();
       const newOption = transToGroupOption(arrayOptions || [], groupBy);
       if (JSON.stringify(newOption) !== JSON.stringify(options)) {
         setOptions(newOption);
       }
     }, [arrayDefaultOptions, arrayOptions, groupBy, onSearch, options]);
 
-    useEffect(() => {
-      const doSearch = async () => {
-        setIsLoading(true);
-        const res = await onSearch?.(debouncedSearchTerm);
-        setOptions(transToGroupOption(res || [], groupBy));
-        setIsLoading(false);
-      };
-
+    
       const exec = async () => {
         if (!onSearch || !open) return;
 
