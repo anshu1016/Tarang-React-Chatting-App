@@ -1,5 +1,7 @@
 import { useSocket } from "@/context/SocketContext"
+import { apiClient } from "@/lib/api-client"
 import { useAppStore } from "@/store"
+import { UPLOAD_FILE_ROUTE } from "@/utils/constants"
 import EmojiPicker from "emoji-picker-react"
 import { useEffect, useRef, useState } from "react"
 import {GrAttachment} from "react-icons/gr"
@@ -78,7 +80,7 @@ const MessageBar = () => {
     const [emojiPicker, setEmojiPicker] = useState(false);
     const { selectedChatType, selectedChatData, userInfo } = useAppStore();
     const socket = useSocket();
-  
+    const fileInputRef = useRef();
     useEffect(() => {
       function handleClickOutside(e) {
         if (emojiRef.current && !emojiRef.current.contains(e.target)) {
@@ -95,7 +97,7 @@ const MessageBar = () => {
       setMessage((msg) => msg + emoji.emoji);
     }
   
-    const handleSendMessage =  () => {
+    const handleSendMessage =  async() => {
 console.log("SEND BUTTON CLICKED",socket)
       if (!socket) {
         alert("Socket not initialized");
@@ -120,6 +122,36 @@ console.log("SEND BUTTON CLICKED",socket)
         messageType: "text"
     }); // Add this line
     }
+    const handleAttachmentClick = async() =>{
+      if(fileInputRef.current){
+        fileInputRef.current.click();
+      }
+    }
+    const handleAttachmentChange = async(event) =>{
+      try{
+        const file = event.target.files[0];
+        console.log(file,"FILE UPLOADED SUCCESSFULLY")
+        if(file){
+          const formData = new FormData();
+          formData.append("file",file)
+          const response = await apiClient.post(UPLOAD_FILE_ROUTE,formData,{withCredentials:true})
+          if(response.status === 200 && response.data){
+            if(selectedChatType === "contact"){
+            socket.emit("sendMessage",{
+              sender: userInfo.id,
+              content: file,
+              recipient: selectedChatData._id,
+              fileURL: response.data.filePath,
+              messageType: "file"
+            })
+          }
+          }
+        }
+      }
+      catch(err){
+        console.log(err)
+      }
+    }
     console.log("userInfo.id:", userInfo.id);
     // console.log("Socket connected:", socket.current.connected);
 
@@ -128,7 +160,7 @@ console.log("SEND BUTTON CLICKED",socket)
     
     return (
       <div className="h-[10vh] bg-[#1c1d25] flex justify-center items-center px-8 mb-6 gap-6">
-        <div className="flex-1 flex rounded-md bg-[#2a2b33] gap-5 pr-5">
+        <div className="flex-1 flex rounded-md bg-[#2a2b33] items-center gap-5 pr-5">
           <input
             type="text"
             className="flex-1 p-5 bg-transparent rounded-md focus:border-none focus:outline-none"
@@ -136,9 +168,10 @@ console.log("SEND BUTTON CLICKED",socket)
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           />
-          <button className="text-neutral-500 focus:border-none focus:outline-none focus:text-white duration-300 transition-all">
+          <button className="text-neutral-500 focus:border-none focus:outline-none focus:text-white duration-300 transition-all" onClick={handleAttachmentClick}>
             <GrAttachment className="text-2xl" />
           </button>
+          <input type="file" className="hidden" ref = {fileInputRef} onChange={handleAttachmentChange} />
           <div className="relative">
             <button
               className="text-neutral-500 focus:border-none focus:outline-none focus:text-white duration-300 transition-all"
