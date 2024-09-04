@@ -2,12 +2,12 @@ import mongoose from "mongoose";
 
 const messageSchema = new mongoose.Schema({
     sender: {
-        type: mongoose.Schema.Types.ObjectId,  // Use "Types" with a capital "T"
+        type: mongoose.Schema.Types.ObjectId,
         ref: "UserChat",
         required: true
     },
     recipient: {
-        type: mongoose.Schema.Types.ObjectId,  // Use "Types" with a capital "T"
+        type: mongoose.Schema.Types.ObjectId,
         ref: "UserChat",
         required: false
     },

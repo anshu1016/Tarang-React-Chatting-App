@@ -1,0 +1,583 @@
+{
+  "Attachments": true,
+  "Progress": {
+    "completedLearningItems": [
+      {
+        "title": "learn.wwl.describe-cloud-compute.introduction-microsoft-azure-fundamentals",
+        "type": "unit",
+        "completedAt": "2022-11-02T04:53:14.6874338Z"
+      },
+      {
+        "title": "learn.wwl.describe-cloud-compute.introduction-cloud-compute",
+        "type": "unit",
+        "completedAt": "2022-11-02T04:53:15.0691308Z"
+      },
+      {
+        "title": "learn.wwl.describe-cloud-compute.what-cloud-compute",
+        "type": "unit",
+        "completedAt": "2022-11-02T04:53:15.4259319Z"
+      },
+      {
+        "title": "learn.wwl.describe-cloud-compute.describe-shared-responsibility-model",
+        "type": "unit",
+        "completedAt": "2022-11-02T04:53:15.7922674Z"
+      },
+      {
+        "title": "learn.wwl.describe-cloud-compute.define-cloud-models",
+        "type": "unit",
+        "completedAt": "2022-11-02T04:53:16.2444548Z"
+      },
+      {
+        "title": "learn.wwl.describe-cloud-compute.describe-consumption-based-model",
+        "type": "unit",
+        "completedAt": "2022-11-02T04:53:16.6142503Z"
+      },
+      {
+        "title": "learn.wwl.describe-cloud-compute.knowledge-check",
+        "type": "unit",
+        "completedAt": "2022-11-02T04:53:17.0854867Z"
+      },
+      {
+        "title": "learn.wwl.describe-cloud-compute.summary",
+        "type": "unit",
+        "completedAt": "2022-11-02T04:53:29.248358Z"
+      },
+      {
+        "title": "learn.wwl.describe-cloud-compute",
+        "type": "module",
+        "completedAt": "2022-11-02T04:53:29.2483709Z"
+      },
+      {
+        "title": "learn.wwl.describe-benefits-use-cloud-services.introduction",
+        "type": "unit",
+        "completedAt": "2022-11-02T04:53:41.497219Z"
+      },
+      {
+        "title": "learn.wwl.describe-benefits-use-cloud-services.high-availability-scalability-cloud",
+        "type": "unit",
+        "completedAt": "2022-11-02T04:53:44.3350819Z"
+      },
+      {
+        "title": "learn.wwl.describe-benefits-use-cloud-services.reliability-predictability-cloud",
+        "type": "unit",
+        "completedAt": "2022-11-02T04:56:13.7833723Z"
+      },
+      {
+        "title": "learn.wwl.describe-benefits-use-cloud-services.security-governance-cloud",
+        "type": "unit",
+        "completedAt": "2022-11-02T04:56:18.255887Z"
+      },
+      {
+        "title": "learn.wwl.describe-benefits-use-cloud-services.manageability-cloud",
+        "type": "unit",
+        "completedAt": "2022-11-02T04:56:22.1548047Z"
+      },
+      {
+        "title": "learn.wwl.describe-benefits-use-cloud-services.knowledge-check",
+        "type": "unit",
+        "completedAt": "2022-11-02T04:56:40.5898456Z"
+      },
+      {
+        "title": "learn.wwl.describe-benefits-use-cloud-services.summary",
+        "type": "unit",
+        "completedAt": "2022-11-02T04:56:51.9309198Z"
+      },
+      {
+        "title": "learn.wwl.describe-benefits-use-cloud-services",
+        "type": "module",
+        "completedAt": "2022-11-02T04:56:51.9309315Z"
+      },
+      {
+        "title": "learn.wwl.describe-cloud-service-types.introduction",
+        "type": "unit",
+        "completedAt": "2022-11-02T04:57:07.2212709Z"
+      },
+      {
+        "title": "learn.wwl.describe-cloud-service-types.describe-infrastructure-service",
+        "type": "unit",
+        "completedAt": "2022-11-02T04:57:09.8564836Z"
+      },
+      {
+        "title": "learn.wwl.describe-cloud-service-types.describe-platform-service",
+        "type": "unit",
+        "completedAt": "2022-11-02T04:57:15.6336764Z"
+      },
+      {
+        "title": "learn.wwl.describe-cloud-service-types.describe-software-service",
+        "type": "unit",
+        "completedAt": "2022-11-02T04:57:20.1353171Z"
+      },
+      {
+        "title": "learn.wwl.describe-cloud-service-types.knowledge-check",
+        "type": "unit",
+        "completedAt": "2022-11-02T04:57:37.7345155Z"
+      },
+      {
+        "title": "learn.wwl.describe-cloud-service-types.summary",
+        "type": "unit",
+        "completedAt": "2022-11-02T04:57:40.9218896Z"
+      },
+      {
+        "title": "learn.wwl.describe-cloud-service-types",
+        "type": "module",
+        "completedAt": "2022-11-02T04:57:40.9218986Z"
+      },
+      {
+        "title": "learn.azure.intro-to-azure-fundamentals.introduction",
+        "type": "unit",
+        "completedAt": "2022-11-02T05:03:45.313339Z"
+      },
+      {
+        "title": "learn.azure.intro-to-azure-fundamentals.what-is-cloud-computing",
+        "type": "unit",
+        "completedAt": "2022-11-02T05:03:50.1062166Z"
+      },
+      {
+        "title": "learn.azure.intro-to-azure-fundamentals.what-is-microsoft-azure",
+        "type": "unit",
+        "completedAt": "2022-11-02T05:03:53.2007281Z"
+      },
+      {
+        "title": "learn.azure.intro-to-azure-fundamentals.tour-of-azure-services",
+        "type": "unit",
+        "completedAt": "2022-11-02T05:04:04.3231734Z"
+      },
+      {
+        "title": "learn.azure.intro-to-azure-fundamentals.get-started-with-azure-accounts",
+        "type": "unit",
+        "completedAt": "2022-11-02T05:04:28.7348173Z"
+      },
+      {
+        "title": "learn.azure.intro-to-azure-fundamentals.case-study-introduction",
+        "type": "unit",
+        "completedAt": "2022-11-02T05:04:57.6260882Z"
+      },
+      {
+        "title": "learn.azure.intro-to-azure-fundamentals.knowledge-check",
+        "type": "unit",
+        "completedAt": "2022-11-02T05:06:02.0476114Z"
+      },
+      {
+        "title": "learn.azure.intro-to-azure-fundamentals.summary",
+        "type": "unit",
+        "completedAt": "2022-11-02T05:06:06.2942031Z"
+      },
+      {
+        "title": "learn.azure.intro-to-azure-fundamentals",
+        "type": "module",
+        "completedAt": "2022-11-02T05:06:06.2942171Z"
+      },
+      {
+        "title": "learn.azure.fundamental-azure-concepts.introduction",
+        "type": "unit",
+        "completedAt": "2022-11-02T05:06:27.895616Z"
+      },
+      {
+        "title": "learn.azure.fundamental-azure-concepts.types-of-cloud-computing",
+        "type": "unit",
+        "completedAt": "2022-11-02T05:06:33.0186597Z"
+      },
+      {
+        "title": "learn.azure.fundamental-azure-concepts.benefits-of-cloud-computing",
+        "type": "unit",
+        "completedAt": "2022-11-02T05:06:49.9149478Z"
+      },
+      {
+        "title": "learn.azure.fundamental-azure-concepts.categories-of-cloud-services",
+        "type": "unit",
+        "completedAt": "2022-11-02T05:06:52.1462027Z"
+      },
+      {
+        "title": "learn.azure.fundamental-azure-concepts.knowledge-check",
+        "type": "unit",
+        "completedAt": "2022-11-02T05:07:48.75356Z"
+      },
+      {
+        "title": "learn.azure.fundamental-azure-concepts.summary",
+        "type": "unit",
+        "completedAt": "2022-11-02T05:07:52.0821188Z"
+      },
+      {
+        "title": "learn.azure.fundamental-azure-concepts",
+        "type": "module",
+        "completedAt": "2022-11-02T05:07:52.0821321Z"
+      },
+      {
+        "title": "learn.azure.azure-architecture-fundamentals.introduction",
+        "type": "unit",
+        "completedAt": "2022-11-02T05:08:04.0721179Z"
+      },
+      {
+        "title": "learn.azure.azure-architecture-fundamentals.overview",
+        "type": "unit",
+        "completedAt": "2022-11-02T05:08:08.0302997Z"
+      },
+      {
+        "title": "learn.azure.azure-architecture-fundamentals.regions-availability-zones",
+        "type": "unit",
+        "completedAt": "2022-11-02T05:08:11.2727444Z"
+      },
+      {
+        "title": "learn.azure.azure-architecture-fundamentals.resources-resource-manager",
+        "type": "unit",
+        "completedAt": "2022-11-02T05:08:15.2499059Z"
+      },
+      {
+        "title": "learn.azure.azure-architecture-fundamentals.management-groups-subscriptions",
+        "type": "unit",
+        "completedAt": "2022-11-02T05:08:19.2587225Z"
+      },
+      {
+        "title": "learn.azure.azure-architecture-fundamentals.knowledge-check",
+        "type": "unit",
+        "completedAt": "2022-11-02T05:08:29.4320624Z"
+      },
+      {
+        "title": "learn.azure.azure-architecture-fundamentals.summary",
+        "type": "unit",
+        "completedAt": "2022-11-02T05:08:32.0115006Z"
+      },
+      {
+        "title": "learn.azure.azure-architecture-fundamentals",
+        "type": "module",
+        "completedAt": "2022-11-02T05:08:32.0115114Z"
+      }
+    ]
+  },
+  "VerifiableCredentials": {
+    "docsId": "9c3c7abc-6fc6-4c36-98ad-32ac3696f60a",
+    "userCredentials": []
+  },
+  "Assessments": null,
+  "LearnAssessment": {
+    "docsId": "9c3c7abc-6fc6-4c36-98ad-32ac3696f60a",
+    "sessions": []
+  },
+  "NextSteps": {
+    "docsId": "9c3c7abc-6fc6-4c36-98ad-32ac3696f60a",
+    "dismissals": [],
+    "enrollments": [
+      {
+        "id": "96eead34-4607-42cc-8d70-c496f27801f4",
+        "partitionKey": "9c3c7abc-6fc6-4c36-98ad-32ac3696f60a",
+        "sourceType": "learningpath",
+        "sourceId": "learn.wwl.microsoft-azure-fundamentals-describe-cloud-concepts",
+        "_ts": 1667364813
+      },
+      {
+        "id": "cc1cd44d-0224-4720-b0a0-654066239425",
+        "partitionKey": "9c3c7abc-6fc6-4c36-98ad-32ac3696f60a",
+        "sourceType": "learningpath",
+        "sourceId": "learn.az-900-describe-cloud-concepts",
+        "_ts": 1667365583
+      }
+    ]
+  },
+  "Certifications": null,
+  "Lists": {
+    "userId": "9c3c7abc-6fc6-4c36-98ad-32ac3696f60a",
+    "lists": [
+      {
+        "id": "bookmarks",
+        "userId": "9c3c7abc-6fc6-4c36-98ad-32ac3696f60a",
+        "name": "Bookmarks",
+        "description": "",
+        "type": "bookmarks",
+        "lastModified": "2022-11-02T05:03:41+00:00",
+        "totalItems": 1,
+        "items": [
+          {
+            "id": "bookmarks_docs-D11BFA1CC80A13B62B2F96492F585FB4",
+            "listId": "bookmarks",
+            "type": "docs",
+            "data": {
+              "url": "/training/modules/intro-to-azure-fundamentals/",
+              "rawUrl": "https://learn.microsoft.com/en-us/training/modules/intro-to-azure-fundamentals/",
+              "title": "Introduction to Azure fundamentals - Training",
+              "docId": "16ce312a-b262-c3e4-9043-50cca4991f25",
+              "docVIId": "935e0918-9956-274b-e178-b9c84d8178d9",
+              "pageType": "learn",
+              "pageKind": "module",
+              "uid": "learn.azure.intro-to-azure-fundamentals",
+              "challengeId": null,
+              "eventUid": "",
+              "durationInMillisecond": null,
+              "showId": ""
+            },
+            "lastModified": "2022-11-02T05:03:40+00:00"
+          }
+        ],
+        "itemCount": 1,
+        "sections": [],
+        "sectionCount": 0,
+        "isPrivate": false,
+        "isOfficial": false,
+        "shouldLocalize": false,
+        "isLocalized": false,
+        "isFallbackLocale": false,
+        "showUserDisplayName": false,
+        "moduleCount": 0,
+        "completedModuleCount": 0,
+        "remainingDuration": 0,
+        "totalDuration": 0
+      }
+    ],
+    "createdSkillingPlans": {
+      "userId": "9c3c7abc-6fc6-4c36-98ad-32ac3696f60a",
+      "skillingPlanFilter": 1,
+      "skillingPlans": [],
+      "count": 0
+    },
+    "createdLearnChallenges": {
+      "userId": "9c3c7abc-6fc6-4c36-98ad-32ac3696f60a",
+      "learnChallengeFilter": "all",
+      "challenges": [],
+      "count": 0
+    },
+    "userRegistrations": {
+      "id": "9c3c7abc-6fc6-4c36-98ad-32ac3696f60a",
+      "registrations": [],
+      "lastModified": "2024-08-27T09:18:37+00:00"
+    }
+  },
+  "SkillAssessment": null,
+  "TechProfile": {
+    "email": "arun.shukla@nagarro.com",
+    "locale": "en-us",
+    "country": "IN",
+    "contactPointTopicSetting": "OptInImplicit",
+    "isInstructor": false,
+    "isChallengeAdmin": false,
+    "isQnaModerator": false,
+    "source": "learn",
+    "authenticationModes": [
+      {
+        "id": "f48bd0e8-c46a-472a-a698-d7ad884ad8ff",
+        "type": "AAD",
+        "tenantId": "a45fe71a-f480-4e42-ad5e-aff33165aa35",
+        "upn": "arun.shukla@nagarro.com",
+        "oid": "f48bd0e8-c46a-472a-a698-d7ad884ad8ff",
+        "dateAcceptedPrivacyNotice": "2022-11-02T04:52:21.5753778+00:00",
+        "dateAdded": "2022-11-02T04:52:21.5753778+00:00"
+      }
+    ],
+    "interests": {
+      "roles": [
+        "maker",
+        "business-analyst",
+        "data-analyst",
+        "data-engineer",
+        "developer",
+        "student"
+      ],
+      "levels": [
+        "beginner"
+      ],
+      "products": [
+        "dotnet",
+        "github",
+        "vs",
+        "vs-code",
+        "windows"
+      ],
+      "expandedRoles": [],
+      "expandedProducts": [],
+      "expandedSubjects": [],
+      "contentTypes": []
+    },
+    "transcriptSettings": {
+      "publicLink": {
+        "showModules": true,
+        "showLegalName": true,
+        "showMCID": true,
+        "showContactEmail": true
+      },
+      "print": {
+        "showModules": true,
+        "showLegalName": true,
+        "showMCID": true,
+        "showContactEmail": true
+      }
+    },
+    "certificationSettings": {
+      "print": {
+        "showLegalName": true,
+        "showMCID": true,
+        "showContactEmail": true
+      }
+    },
+    "qnaEmailPreferences": {
+      "allEmail": true,
+      "autoFollowAsked": true,
+      "autoFollowAnswered": true,
+      "autoFollowCommented": true,
+      "autoFollowTagged": false,
+      "emailEventSettings": {
+        "newMention": "instant",
+        "newModeration": "instant",
+        "answerPosted": "instant",
+        "answerAccepted": "instant",
+        "commentPosted": "instant",
+        "newPrivateMessage": "instant"
+      }
+    },
+    "sharingId": "2C394B9BBADEC930",
+    "userId": "9c3c7abc-6fc6-4c36-98ad-32ac3696f60a",
+    "userName": "ArunShukla-2424",
+    "displayName": "Arun Shukla",
+    "isPrivate": false,
+    "affiliations": [],
+    "followerCount": 0,
+    "followingCount": 0,
+    "answersAccepted": 0,
+    "reputationPoints": 0,
+    "createdOn": "11/2/2022 4:52:21 AM"
+  },
+  "XP": {
+    "xp": {
+      "docsId": "9c3c7abc-6fc6-4c36-98ad-32ac3696f60a",
+      "totalXp": 8050,
+      "currentLevel": 4,
+      "currentLevelLow": 8000,
+      "currentLevelHigh": 13299,
+      "currentLevelPointsEarned": 50,
+      "nextLevel": 5,
+      "pointsUntilNextLevel": 5250,
+      "achievementCategories": {
+        "Unknown": 0,
+        "Modules": 6,
+        "Courses": 0,
+        "Qna": 0,
+        "Challenges": 0,
+        "Events": 0,
+        "LearningPaths": 2,
+        "Plans": 0,
+        "Special": 0
+      }
+    },
+    "achievements": [
+      {
+        "category": "learningpaths",
+        "typeId": "learn.az-900-describe-cloud-concepts.trophy",
+        "userId": "9c3c7abc-6fc6-4c36-98ad-32ac3696f60a",
+        "id": "C8DJRP98",
+        "title": "Microsoft Azure Fundamentals: Describe core Azure concepts",
+        "imageUrl": "/training/achievements/az-900-describe-cloud-concepts.svg",
+        "locale": "en-us",
+        "verified": false,
+        "source": "Progress",
+        "grantedOn": "2022-11-02T05:08:32.29Z",
+        "milestoneEligible": true,
+        "version": 294
+      },
+      {
+        "category": "modules",
+        "typeId": "learn.azure.azure-architecture-fundamentals.badge",
+        "userId": "9c3c7abc-6fc6-4c36-98ad-32ac3696f60a",
+        "id": "W2ED8TNA",
+        "title": "Describe core Azure architectural components",
+        "imageUrl": "/training/achievements/azure-architecture-fundamentals.svg",
+        "locale": "en-us",
+        "verified": false,
+        "source": "Progress",
+        "grantedOn": "2022-11-02T05:08:32.29Z",
+        "milestoneEligible": true,
+        "version": 344
+      },
+      {
+        "category": "modules",
+        "typeId": "learn.azure.fundamental-azure-concepts.badge",
+        "userId": "9c3c7abc-6fc6-4c36-98ad-32ac3696f60a",
+        "id": "K8GMWXBH",
+        "title": "Discuss Azure fundamental concepts",
+        "imageUrl": "/training/achievements/fundamental-azure-concepts.svg",
+        "locale": "en-us",
+        "verified": false,
+        "source": "Progress",
+        "grantedOn": "2022-11-02T05:07:52.26Z",
+        "milestoneEligible": true,
+        "version": 345
+      },
+      {
+        "category": "modules",
+        "typeId": "learn.azure.intro-to-azure-fundamentals.badge",
+        "userId": "9c3c7abc-6fc6-4c36-98ad-32ac3696f60a",
+        "id": "UQD5GG3J",
+        "title": "Introduction to Azure fundamentals",
+        "imageUrl": "/training/achievements/intro-to-azure-fundamentals.svg",
+        "locale": "en-us",
+        "verified": false,
+        "source": "Progress",
+        "grantedOn": "2022-11-02T05:06:06.48Z",
+        "milestoneEligible": true,
+        "version": 348
+      },
+      {
+        "category": "modules",
+        "typeId": "learn.wwl.describe-cloud-service-types.badge",
+        "userId": "9c3c7abc-6fc6-4c36-98ad-32ac3696f60a",
+        "id": "98RD82KU",
+        "title": "Describe cloud service types",
+        "imageUrl": "/training/achievements/describe-cloud-service-types.svg",
+        "locale": "en-us",
+        "verified": false,
+        "source": "Progress",
+        "grantedOn": "2022-11-02T04:57:41.17Z",
+        "url": "/training/modules/describe-cloud-service-types/",
+        "milestoneEligible": true,
+        "version": 2879
+      },
+      {
+        "category": "learningpaths",
+        "typeId": "learn.wwl.microsoft-azure-fundamentals-describe-cloud-concepts.trophy",
+        "userId": "9c3c7abc-6fc6-4c36-98ad-32ac3696f60a",
+        "id": "2PQ9SGRV",
+        "title": "Microsoft Azure Fundamentals: Describe cloud concepts",
+        "imageUrl": "/training/achievements/microsoft-azure-fundamentals-describe-cloud-concepts.svg",
+        "locale": "en-us",
+        "verified": false,
+        "source": "Progress",
+        "grantedOn": "2022-11-02T04:57:41.17Z",
+        "url": "/training/paths/microsoft-azure-fundamentals-describe-cloud-concepts/",
+        "milestoneEligible": true,
+        "version": 4746
+      },
+      {
+        "category": "modules",
+        "typeId": "learn.wwl.describe-benefits-of-using-cloud-services.badge",
+        "userId": "9c3c7abc-6fc6-4c36-98ad-32ac3696f60a",
+        "id": "UWYJU2P3",
+        "title": "Describe the benefits of using cloud services",
+        "imageUrl": "/training/achievements/describe-benefits-use-cloud-services.svg",
+        "locale": "en-us",
+        "verified": false,
+        "source": "Progress",
+        "grantedOn": "2022-11-02T04:56:52.113Z",
+        "url": "/training/modules/describe-benefits-use-cloud-services/",
+        "milestoneEligible": true,
+        "version": 3211
+      },
+      {
+        "category": "modules",
+        "typeId": "learn.wwl.describe-cloud-computing.badge",
+        "userId": "9c3c7abc-6fc6-4c36-98ad-32ac3696f60a",
+        "id": "EB5AVJ7P",
+        "title": "Describe cloud computing",
+        "imageUrl": "/training/achievements/describe-cloud-compute.svg",
+        "locale": "en-us",
+        "verified": false,
+        "source": "Progress",
+        "grantedOn": "2022-11-02T04:53:29.567Z",
+        "url": "/training/modules/describe-cloud-compute/",
+        "milestoneEligible": true,
+        "version": 2719
+      }
+    ]
+  },
+  "Q&A": {
+    "docsId": "9c3c7abc-6fc6-4c36-98ad-32ac3696f60a",
+    "questions": [],
+    "answers": [],
+    "comments": []
+  }
+}

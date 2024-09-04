@@ -65,6 +65,7 @@ const setUpSocket= (server) =>{
             
             console.log(`Sending message to recipient: ${recipientSocketID}`);
             console.log(`Message data: `, messageData);
+            
         } catch (error) {
             console.error("Error in sendMessage:", error);
         }
