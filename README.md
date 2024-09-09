@@ -1,8 +1,10 @@
 # Tarang -React Chatting App
 
-![Project Preview](https://via.placeholder.com/800x400) <!-- Replace with your project image -->
+![Project Preview](![Screenshot 2024-08-14 155557](https://github.com/user-attachments/assets/9e920427-eb5e-4e10-888d-a3be6126eff0)
+/800x400) <!-- Replace with your project image -->
 
 A real-time chatting application built using **React**, **Socket.io**, and **Express**. The app features real-time messaging, profile picture uploads to **AWS S3**, and user authentication. This project demonstrates effective use of modern web technologies to create an engaging messaging experience.
+### An old image. Update Soon..
 
 ## Table of Contents
 
