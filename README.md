@@ -1,6 +1,6 @@
 # Tarang -React Chatting App
 
-![Project Preview] (![Screenshot 2024-08-14 155557](https://github.com/user-attachments/assets/1d8dfd13-04fa-44e8-93a7-443d7a404d2b/800*400)
+![Project Preview] (![Screenshot 2024-08-14 155557](https://github.com/user-attachments/assets/1d8dfd13-04fa-44e8-93a7-443d7a404d2b)
 
 
 
